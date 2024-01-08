@@ -1,0 +1,348 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CSS variable */
+:root {
+    --navbar-height: 59px;
+}
+
+/* Navigation Bar */
+#navbar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-family: 'Baloo Bhai 2' 'cursive';
+
+}
+
+#navbar::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background-color: black;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+/* Navigation Bar: Logo and Image */
+#logo {
+    margin: 5px 20px;
+    height: 50%
+}
+
+#logo img {
+    margin: 3px 5px;
+    height: 57px;
+    border-radius: 10px;
+    border-right: 2px solid white;
+    border-left: 2px solid white;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+/* Navigation Bar: List and style  */
+#navbar ul {
+    display: flex;
+}
+
+#navbar ul li {
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a {
+    display: block;
+    text-decoration: none;
+    list-style: none;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+     padding: 2px 10px; 
+    color: white;
+    font-weight: bold;
+}
+
+#navbar ul li a:hover {
+    color: black;
+    border-radius: 26px;
+    background-color: white;
+}
+
+/* Home Section  */
+#home {
+    display: flex;
+    flex-direction: column;
+    height: 526px;
+    /* ei height er upor navbar er position thik chilo  and servicer h-primary o thik chilo*/
+    padding: 3px 70px;
+    align-items: center;
+    justify-content: center;
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    height: 84%;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background: url('Image/bg.5.jpg') no-repeat center center/cover;
+    z-index: -1;
+    opacity: 0.85;
+}
+
+#home h1 {
+    color: white;
+    /* font-size: 2.4rem; */
+    font-family: 'Bree Serif', serif;
+    text-align: center;
+
+}
+
+#home p {
+    color: white;
+    font-size: 1.3rem;
+    font-family: 'Bree Serif', serif;
+    align-items: center;
+
+}
+
+.btn {
+    padding: 7px 21px;
+    background-color: green;
+    color: white;
+    border-radius: 18px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin: 16px 20px;
+    cursor: pointer;
+}
+
+/* Service section */
+
+#services {
+    margin: 36px;
+    display: flex;
+}
+
+#services .box {
+    border: 3px solid rgb(176, 34, 105);
+    background: rgb(238, 241, 244);
+    padding: 16px;
+    margin: 3px 16px;
+    border-radius: 23px;
+}
+
+#services .box img {
+
+    height: 150px;
+    margin: auto;
+    display: block;
+    border-radius: 100px;
+}
+
+#services .box p {
+    font-family: 'Bree Serif', serif;
+
+}
+
+#client-section {
+    /* height: 336px; */
+    position: relative;
+
+}
+
+#client-section::before {
+    content: "";
+    position: absolute;
+    background: url('image/bg4.jpg') no-repeat center center/cover;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.5;
+
+}
+
+#clients {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 12px 16px;
+}
+
+#clients img {
+    height: 200px;
+
+    /* width: 260px; */
+    border-radius: 92px;
+}
+
+.client-item {
+    margin: 6px 12px;
+    padding: 11px;
+}
+
+/* contact section */
+
+#contact-section {
+    position: relative;
+    /* height: 446px; */
+    /* margin-top: 80px; */
+}
+
+#contact-section::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: url("image/bg1.jpg") no-repeat center center/cover;
+    z-index: -1;
+    opacity: 0.;
+
+}
+
+#contact-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 36px;
+}
+
+#contact-box input,
+#contact-box textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 7px;
+}
+
+#contact-box form {
+    width: 40%;
+}
+
+#contact-box label {
+    font-size: 1.2rem;
+    font-family: 'Bree Serif', serif;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    background: black;
+    color: white;
+    font-size: 1.3rem;
+    font-family: 'Bree Serif', serif;
+
+}
+
+/* Utility class */
+.h-primary {
+    font-size: 3.6rem;
+    padding: 16px;
+    font-family: 'Bree Serif', serif;
+
+}
+
+.h-secondary {
+    font-size: 1.6rem;
+    padding: 16px;
+    font-family: 'Bree Serif', serif;
+
+}
+
+.center {
+    text-align: center;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 786px) {
+    /* body{
+    box-sizing: border-box;
+    } */
+    /* Navigation menu */
+    #navbar {
+        flex-direction: column;
+    }
+    #navbar ul li a{
+        font-size: 1.0rem;
+        padding: 0px 7px;
+        padding-bottom: 5px;
+    }
+    /* Home section  */
+    #home{
+        height: 540px;
+        padding: 3px 25px;
+    }
+    #home::before{
+        
+    }
+    #home p{
+        font-size: 1.0rem;
+    }
+    /* Service section  */
+    #services {
+        flex-direction: column;
+    }
+    #services .box{
+    padding: 16px;
+    margin: 3px 0px;
+    margin-bottom: 16px;
+}
+
+
+    }
+    /* Client section  */
+    #clients {
+        flex-wrap: wrap;
+    }
+    #clients img{
+        width: 70px;       
+        padding: 2px 6px;
+        height: auto;
+        border-radius: 92px;
+    }
+    /* Contact section  */
+    #contact-box form{
+        width: 50%;
+
+    }
+    /* Utility section  */
+    .h-primary {
+        font-size: 1.9rem;
+    }
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .example {
+        background: green;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .example {
+        background: blue;
+    }
+    #home{
+        height: 572px; 
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+    .h-primary {
+        font-size: 2.0rem;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+ @media only screen and (min-width: 1200px) {
+  
+}
